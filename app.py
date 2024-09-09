@@ -20,8 +20,8 @@ def add_data(name):
 
 
 # Usersテーブルからnameで指定された行を引っ張ってくる
-def search_data(name):
-    c.execute('SELECT * FROM users WHERE name = ?', name)
+def search_data(key):
+    c.execute('SELECT * FROM users WHERE name = ?', key)
     data = c.fetchall()
     for d in data:
         st.write(d)
